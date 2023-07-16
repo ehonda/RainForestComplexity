@@ -2,7 +2,10 @@ namespace RainForestComplexity;
 
 public static class Complexity
 {
-    public static ulong InnerCalls(uint r, uint d, uint m)
+    public static ulong OuterLoop(uint r, uint d)
+        => BellNumbers.Get(r) * BellNumbers.Get(d);
+    
+    public static ulong InnerLoop(uint r, uint d, uint m)
     {
         ulong result = 0;
         for (uint k = 0; k <= Math.Min(r, d); k++)
