@@ -1,9 +1,9 @@
 ﻿using System.Globalization;
 using RainForestComplexity;
 
-const int r = 6;
-const int d = 6;
-const int m = 16;
+const int r = 8;
+const int d = 8;
+const int m = 1;
 
 var innerLoop = Complexity.InnerLoop(r, d, m);
 var innerLoopNumberString = innerLoop.ToString("N0", CultureInfo.InvariantCulture);
