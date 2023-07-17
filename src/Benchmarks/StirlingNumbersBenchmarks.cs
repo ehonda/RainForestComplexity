@@ -18,10 +18,10 @@ public class StirlingNumbersBenchmarks
     {
         // new object[] { 3, 1 },
         // new object[] { 3, 2 }
-        new object[] { 10, 0 },
-        new object[] { 10, 5 },
-        new object[] { 10, 8 },
-        new object[] { 10, 10 },
+        // new object[] { 10, 0 },
+        // new object[] { 10, 5 },
+        // new object[] { 10, 8 },
+        // new object[] { 10, 10 },
         // new object[] { 10, 0 },
         // new object[] { 10, 1 },
         // new object[] { 10, 2 },
@@ -33,6 +33,11 @@ public class StirlingNumbersBenchmarks
         // new object[] { 10, 8 },
         // new object[] { 10, 9 },
         // new object[] { 10, 10 },
+        new object[] { 12, 6 },
+        new object[] { 14, 7 },
+        new object[] { 16, 8 },
+        new object[] { 18, 9 },
+        new object[] { 20, 10 }
     };
     
     [Benchmark]

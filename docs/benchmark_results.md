@@ -93,3 +93,24 @@ in those cases, but still have the caching for the other cases.
 |                                      |    |    |               |           |           |       |         |
 | StirlingNumbersSecondKindNaive       | 10 | 10 |     0.6506 ns | 0.0213 ns | 0.0199 ns |  0.66 |    0.02 |
 | StirlingNumbersSecondKindWithCaching | 10 | 10 |     0.9935 ns | 0.0140 ns | 0.0117 ns |  1.00 |    0.00 |
+
+### Necessity of caching
+
+Large values of n show us that we desperately need caching.
+
+| Method                               | n  | k  |          Mean |        Error |       StdDev |     Ratio | RatioSD |
+|--------------------------------------|----|----|--------------:|-------------:|-------------:|----------:|--------:|
+| StirlingNumbersSecondKindNaive       | 12 | 6  |   4,240.36 ns |    41.566 ns |    36.847 ns |     97.33 |    0.83 |
+| StirlingNumbersSecondKindWithCaching | 12 | 6  |      43.55 ns |     0.278 ns |     0.260 ns |      1.00 |    0.00 |
+|                                      |    |    |               |              |              |           |         |
+| StirlingNumbersSecondKindNaive       | 14 | 7  |  15,597.68 ns |   138.270 ns |   122.573 ns |    349.34 |    3.73 |
+| StirlingNumbersSecondKindWithCaching | 14 | 7  |      44.64 ns |     0.206 ns |     0.192 ns |      1.00 |    0.00 |
+|                                      |    |    |               |              |              |           |         |
+| StirlingNumbersSecondKindNaive       | 16 | 8  |  59,356.50 ns |   547.236 ns |   485.111 ns |  1,366.87 |   17.14 |
+| StirlingNumbersSecondKindWithCaching | 16 | 8  |      43.43 ns |     0.305 ns |     0.286 ns |      1.00 |    0.00 |
+|                                      |    |    |               |              |              |           |         |
+| StirlingNumbersSecondKindNaive       | 18 | 9  | 226,315.65 ns | 1,206.246 ns | 1,007.270 ns |  5,210.85 |   33.97 |
+| StirlingNumbersSecondKindWithCaching | 18 | 9  |      43.42 ns |     0.194 ns |     0.172 ns |      1.00 |    0.00 |
+|                                      |    |    |               |              |              |           |         |
+| StirlingNumbersSecondKindNaive       | 20 | 10 | 862,431.97 ns | 4,196.828 ns | 3,925.716 ns | 18,927.75 |  135.36 |
+| StirlingNumbersSecondKindWithCaching | 20 | 10 |      45.57 ns |     0.329 ns |     0.308 ns |      1.00 |    0.00 |
