@@ -74,3 +74,22 @@ The worst case for k seems to be somewhere around `n / 2`, which makes sense bec
 |                                      |    |    |               |            |             |       |         |
 | StirlingNumbersSecondKindNaive       | 10 | 10 |     0.7776 ns |  0.0161 ns |   0.0151 ns |  0.02 |    0.00 |
 | StirlingNumbersSecondKindWithCaching | 10 | 10 |    44.0987 ns |  0.2569 ns |   0.2403 ns |  1.00 |    0.00 |
+
+### Improved trivial values handling
+
+If we don't cache the trivial values but rather check for them directly, we can be as efficient as the naive version
+in those cases, but still have the caching for the other cases.
+
+| Method                               | n  | k  |          Mean |     Error |    StdDev | Ratio | RatioSD |
+|--------------------------------------|----|----|--------------:|----------:|----------:|------:|--------:|
+| StirlingNumbersSecondKindNaive       | 10 | 0  |     1.3364 ns | 0.0161 ns | 0.0150 ns |  1.35 |    0.02 |
+| StirlingNumbersSecondKindWithCaching | 10 | 0  |     0.9920 ns | 0.0079 ns | 0.0074 ns |  1.00 |    0.00 |
+|                                      |    |    |               |           |           |       |         |
+| StirlingNumbersSecondKindNaive       | 10 | 5  | 1,122.7818 ns | 9.3195 ns | 8.2615 ns | 25.47 |    0.25 |
+| StirlingNumbersSecondKindWithCaching | 10 | 5  |    44.0632 ns | 0.3256 ns | 0.3045 ns |  1.00 |    0.00 |
+|                                      |    |    |               |           |           |       |         |
+| StirlingNumbersSecondKindNaive       | 10 | 8  |   195.8369 ns | 1.3146 ns | 1.2297 ns |  4.52 |    0.05 |
+| StirlingNumbersSecondKindWithCaching | 10 | 8  |    43.3580 ns | 0.4129 ns | 0.3862 ns |  1.00 |    0.00 |
+|                                      |    |    |               |           |           |       |         |
+| StirlingNumbersSecondKindNaive       | 10 | 10 |     0.6506 ns | 0.0213 ns | 0.0199 ns |  0.66 |    0.02 |
+| StirlingNumbersSecondKindWithCaching | 10 | 10 |     0.9935 ns | 0.0140 ns | 0.0117 ns |  1.00 |    0.00 |

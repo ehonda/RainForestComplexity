@@ -1,7 +1,6 @@
 namespace RainForestComplexity;
 
 // TODO: Use BigInteger
-// TODO: Use caching and benchmark
 // TODO: Better naming
 public static class StirlingNumbers
 {
@@ -20,20 +19,16 @@ public static class StirlingNumbers
 
     public static ulong SecondKindWithCaching(uint n, uint k)
     {
+        if (n == k) return 1;
+        if (n == 0 || k == 0) return 0;
+        
         if (SecondKindCache.TryGetValue(new(n, k), out var cachedValue))
         {
             return cachedValue;
         }
         
-        var result = CalculateResult();
+        var result = k * SecondKindWithCaching(n - 1, k) + SecondKindWithCaching(n - 1, k - 1);
         SecondKindCache[new(n, k)] = result;
         return result;
-        
-        ulong CalculateResult()
-        {
-            if (n == k) return 1;
-            if (n == 0 || k == 0) return 0;
-            return k * SecondKindWithCaching(n - 1, k) + SecondKindWithCaching(n - 1, k - 1);
-        }
     }
 }
