@@ -17,7 +17,7 @@ public static class Complexity
     }
 
     private static ulong SizeK(uint r, uint d, uint k, uint m)
-        => StirlingNumbers.SecondKind(r, k) * StirlingNumbers.SecondKind(d, k) * Factorial(k) * m;
+        => StirlingNumbers.SecondKindNaive(r, k) * StirlingNumbers.SecondKindNaive(d, k) * Factorial(k) * m;
     
     private static ulong Factorial(uint n)
     {

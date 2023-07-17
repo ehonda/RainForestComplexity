@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DF8C72C8-FF0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainForestComplexity", "src\RainForestComplexity\RainForestComplexity.csproj", "{0871865F-3E3C-49FA-85BB-E43004B67511}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Benchmarks", "src\Benchmarks\Benchmarks.csproj", "{0049A0E5-1922-4EED-9979-A4DB6C968F70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +19,16 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0871865F-3E3C-49FA-85BB-E43004B67511} = {DF8C72C8-FF0B-4DFB-8EC8-B44456128B96}
+		{0049A0E5-1922-4EED-9979-A4DB6C968F70} = {DF8C72C8-FF0B-4DFB-8EC8-B44456128B96}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{0871865F-3E3C-49FA-85BB-E43004B67511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0871865F-3E3C-49FA-85BB-E43004B67511}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0871865F-3E3C-49FA-85BB-E43004B67511}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0871865F-3E3C-49FA-85BB-E43004B67511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0049A0E5-1922-4EED-9979-A4DB6C968F70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0049A0E5-1922-4EED-9979-A4DB6C968F70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0049A0E5-1922-4EED-9979-A4DB6C968F70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0049A0E5-1922-4EED-9979-A4DB6C968F70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
