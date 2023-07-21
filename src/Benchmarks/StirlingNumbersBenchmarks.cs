@@ -33,11 +33,15 @@ public class StirlingNumbersBenchmarks
         // new object[] { 10, 8 },
         // new object[] { 10, 9 },
         // new object[] { 10, 10 },
-        new object[] { 12, 6 },
-        new object[] { 14, 7 },
-        new object[] { 16, 8 },
-        new object[] { 18, 9 },
-        new object[] { 20, 10 }
+        // new object[] { 12, 6 },
+        // new object[] { 14, 7 },
+        // new object[] { 16, 8 },
+        // new object[] { 18, 9 },
+        new object[] { 24, 12 },
+        new object[] { 28, 14 },
+        new object[] { 32, 16 },
+        new object[] { 36, 18 },
+        new object[] { 40, 20 }
     };
     
     [Benchmark]

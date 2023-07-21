@@ -7,7 +7,7 @@ public static class BellNumbers
         ulong result = 0;
         for (uint k = 0; k <= n; k++)
         {
-            result += StirlingNumbers.SecondKindNaive(n, k);
+            result += StirlingNumbers.SecondKindWithCaching(n, k);
         }
 
         return result;
